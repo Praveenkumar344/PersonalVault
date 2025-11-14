@@ -4,7 +4,7 @@ import PasswordTable from "./PasswordTable.tsx";
 import type { Division, PasswordEntry } from "../types/index.ts";
 import ConfirmDialog from "./ConfirmDialog.tsx";
 import api from "../api.ts";
-
+import { Toaster } from "sonner";
 interface Props {
   division: Division;
   removeDivision: (id: number) => void;
@@ -101,6 +101,7 @@ const addPassword = async (entry: PasswordEntry | Omit<PasswordEntry, "id">) => 
 
   return (
     <div className="flex flex-col shadow-[#ffffff] shadow-[0_0_2px_2px_rgba(0,0,0,0.5)] rounded-md overflow-hidden mb-2 mr-2">
+      <Toaster />
       <div className="bg-amber-50 pt-1"></div>
       <div className="bg-[#1a1a1a] rounded-b-md p-4 h-full">
         <div className="flex justify-between items-center mb-3">

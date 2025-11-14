@@ -1,7 +1,7 @@
 import type { PasswordEntry } from "../types";
 import { useState } from "react";
 import { FaEye, FaEyeSlash, FaTrash, FaPen } from "react-icons/fa";
-import {Toaster,toast} from "sonner";
+import {toast} from "sonner";
 interface Props {
   passwords: PasswordEntry[];
   onDelete: (id: number) => void;
@@ -44,7 +44,7 @@ export default function PasswordTable({ passwords, onDelete, onSave }: Props) {
 
   return (
     <table className="w-full  table-fixed text-center text-sm mt-2 border-collapse">
-      <Toaster />
+      
       <thead>
         <tr className="text-gray-400 border-b border-gray-700">
           <th className="p-2">Site</th>

@@ -50,7 +50,7 @@ function App() {
           />
 
           {/* 2FA setup/verify can also be public depending on flow */}
-          <Route path="/setup-2fa" element={<ProtectedRoute><Setup2FA /></ProtectedRoute>} />
+          <Route path="/setup-2fa" element={<Setup2FA />} />
           <Route path="/verify-2fa" element={<PublicRoute><Verify2FA /></PublicRoute>} />
 
           {/* Protected route */}
