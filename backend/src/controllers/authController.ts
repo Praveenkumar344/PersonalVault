@@ -516,7 +516,7 @@ export const refreshToken = async (
   try {
     // cookie contains raw refresh token
     const raw = String(req.cookies?.refresh_token || "");
-    if (!raw) return res.status(401).json({ message: "No refresh token." });
+    if (!raw) return res.status(200).json({ message: "No refresh token." });
 
     const incomingHash = sha256Hex(raw);
     console.log("Incoming refresh token hash:", incomingHash);
